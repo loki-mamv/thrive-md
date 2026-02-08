@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='16' y='24' font-family='-apple-system,system-ui,sans-serif' font-weight='800' font-size='16' fill='%230d9488' text-anchor='middle' letter-spacing='-0.5'%3E.md%3C/text%3E%3C/svg%3E">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thrive.md — Your Trusted Health Companion</title>
+    <meta name="description" content="Evidence-based health information, AI-powered answers, and compassionate guidance for your wellness journey.">
+    
+    <!-- Schema.org Structured Data for GEO/AI Search Optimization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://thrive.md/#organization",
+          "name": "thrive.md",
+          "url": "https://thrive.md",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://thrive.md/logo.png"
+          },
+          "description": "A network of 25 premium health domains providing evidence-based medical information reviewed by clinicians.",
+          "sameAs": [
+            "https://anxiety.md",
+            "https://mental.md",
+            "https://glp1.md"
+          ],
+          "knowsAbout": [
+            "Mental Health",
+            "Anxiety Disorders",
+            "GLP-1 Medications",
+            "Preventive Health Screenings",
+            "Patient Rights",
+            "Health Insurance"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://thrive.md/#website",
+          "url": "https://thrive.md",
+          "name": "thrive.md — Your Trusted Health Companion",
+          "description": "Evidence-based health information across 25 specialized domains",
+          "publisher": {"@id": "https://thrive.md/#organization"},
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://thrive.md/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://thrive.md/#webpage",
+          "url": "https://thrive.md",
+          "name": "thrive.md — Your Trusted Health Companion",
+          "description": "Evidence-based health information, AI-powered answers, and compassionate guidance for your wellness journey.",
+          "isPartOf": {"@id": "https://thrive.md/#website"},
+          "about": {
+            "@type": "MedicalBusiness",
+            "name": "Health Information Network"
+          },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".hero-content h1", ".hero-content p", ".trust-section h2"]
+          },
+          "lastReviewed": "2026-02-04"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What causes anxiety?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Anxiety can be caused by a combination of genetic factors, brain chemistry, personality traits, and life events. Stressful experiences, trauma, and chronic health conditions can also trigger anxiety disorders."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are GLP-1 medications?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GLP-1 medications like Ozempic, Wegovy, and Mounjaro are injectable drugs that mimic the GLP-1 hormone, helping regulate blood sugar and reduce appetite. They are FDA-approved for type 2 diabetes and weight management."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When should I get a colonoscopy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The American Cancer Society recommends adults at average risk start colorectal cancer screening at age 45. Those with family history or other risk factors may need to start earlier."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #4a7c6f;
+            --sage-light: #6b9b8a;
+            --sage-dark: #3d6b5f;
+            --cream: #faf9f7;
+            --warm-white: #ffffff;
+            --text-primary: #2d3436;
+            --text-secondary: #636e72;
+            --text-muted: #95a5a6;
+            --coral: #e17055;
+            --coral-light: #fab1a0;
+            --lavender: #a29bfe;
+            --mint: #55efc4;
+            --gradient-warm: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            --gradient-calm: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --gradient-sage: linear-gradient(135deg, #4a7c6f 0%, #6b9b8a 100%);
+            --shadow-soft: 0 4px 20px rgba(0,0,0,0.06);
+            --shadow-medium: 0 8px 40px rgba(0,0,0,0.08);
+            --shadow-lift: 0 12px 48px rgba(74,124,111,0.15);
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 32px;
+            --radius-xl: 48px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(250, 249, 247, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--sage);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--coral);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage);
+        }
+
+        .nav-cta {
+            background: var(--gradient-sage);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lift);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 70%;
+            height: 140%;
+            background: var(--gradient-calm);
+            border-radius: 0 0 0 60%;
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .hero-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-content h1 span {
+            background: var(--gradient-sage);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 480px;
+            line-height: 1.7;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .badge-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* AI Chat Widget */
+        .chat-widget {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-medium);
+            overflow: hidden;
+            max-width: 480px;
+        }
+
+        .chat-header {
+            background: var(--gradient-sage);
+            padding: 1.5rem 2rem;
+            color: white;
+        }
+
+        .chat-header h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .chat-header p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .chat-body {
+            padding: 1.5rem;
+        }
+
+        .chat-input-wrapper {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 1rem 1.25rem;
+            border: 2px solid #e8e8e8;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: var(--sage);
+            box-shadow: 0 0 0 4px rgba(74,124,111,0.1);
+        }
+
+        .chat-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .chat-send {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--gradient-sage);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .chat-send:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lift);
+        }
+
+        .chat-send svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+        }
+
+        .chat-suggestions {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .chat-suggestion {
+            padding: 0.5rem 1rem;
+            background: var(--cream);
+            border: 1px solid #e8e8e8;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .chat-suggestion:hover {
+            background: var(--sage);
+            color: white;
+            border-color: var(--sage);
+        }
+
+        /* Chat messages */
+        .chat-messages {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .chat-messages.active { display: flex; }
+        .chat-message {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+        .chat-message.user { flex-direction: row-reverse; }
+        .chat-avatar {
+            width: 32px; height: 32px; border-radius: 50%;
+            background: var(--gradient-sage); color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; font-weight: 700; flex-shrink: 0;
+        }
+        .chat-message.user .chat-avatar { background: var(--text-secondary); }
+        .chat-bubble {
+            background: var(--cream); padding: 0.875rem 1rem;
+            border-radius: 16px; max-width: 85%;
+            font-size: 0.95rem; line-height: 1.6;
+        }
+        .chat-message.user .chat-bubble { background: var(--sage); color: white; }
+        .chat-bubble p { margin: 0; }
+        .chat-bubble p + p { margin-top: 0.75rem; }
+        @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+
+        /* Split-screen mode */
+        body.split-mode { padding-right: 45%; }
+        body.split-mode nav { 
+            right: 45%; 
+            padding-right: 1rem;
+        }
+        body.split-mode .nav-inner {
+            max-width: 100%;
+        }
+        body.split-mode .chat-panel {
+            position: fixed; top: 0; right: 0; width: 45%; height: 100vh;
+            background: var(--cream); border-left: 1px solid rgba(0,0,0,0.08);
+            display: flex; flex-direction: column; z-index: 200;
+            animation: slideIn 0.4s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        body.split-mode .chat-panel .panel-header {
+            padding: 20px 24px; border-bottom: 1px solid rgba(0,0,0,0.06);
+            background: white; position: relative;
+        }
+        body.split-mode .chat-panel .panel-header h3 {
+            font-family: 'Fraunces', serif; font-size: 1.25rem; margin: 0;
+        }
+        body.split-mode .chat-panel .panel-header p {
+            font-size: 0.9rem; color: var(--text-secondary); margin: 0.25rem 0 0;
+        }
+        body.split-mode .chat-panel .panel-messages {
+            flex: 1; overflow-y: auto; padding: 24px; display: flex;
+            flex-direction: column; gap: 1rem;
+        }
+        body.split-mode .chat-panel .panel-input-area {
+            padding: 16px 24px; border-top: 1px solid rgba(0,0,0,0.06);
+            background: white; display: flex; gap: 0.75rem; align-items: center;
+        }
+        body.split-mode .chat-panel .panel-input {
+            flex: 1; padding: 0.875rem 1rem; border: 2px solid #e8e8e8;
+            border-radius: 12px; font-size: 1rem; font-family: inherit;
+            resize: none; transition: border-color 0.2s;
+        }
+        body.split-mode .chat-panel .panel-input:focus {
+            outline: none; border-color: var(--sage);
+        }
+        /* Hide the entire chat widget in hero when split mode is active */
+        body.split-mode .hero .chat-widget {
+            display: none !important;
+        }
+        /* Trust cards: stack vertically (1 column) when split mode active */
+        body.split-mode .trust-cards {
+            grid-template-columns: 1fr;
+        }
+        /* Topics grid: 2 columns when split mode active */
+        body.split-mode .topics-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        /* Adjust hero to single column in split mode */
+        body.split-mode .hero-inner {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        body.split-mode .hero-content p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        body.split-mode .hero-badges {
+            justify-content: center;
+        }
+        .chat-close {
+            display: none; position: absolute; top: 16px; right: 16px;
+            width: 32px; height: 32px; border: none; background: var(--cream);
+            border-radius: 8px; cursor: pointer; align-items: center;
+            justify-content: center; font-size: 18px; color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+        .chat-close:hover { background: #e8e8e8; color: var(--text-primary); }
+        body.split-mode .chat-close { display: flex; }
+        @media (max-width: 900px) {
+            body.split-mode { padding-right: 0; }
+            body.split-mode nav { right: 0; padding-right: 1rem; }
+            body.split-mode .chat-panel { width: 100%; }
+            body.split-mode .topics-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Trust Section */
+        .trust-section {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .trust-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .trust-section h2 {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .trust-section > .trust-inner > p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .trust-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .trust-card {
+            padding: 2.5rem 2rem;
+            background: var(--cream);
+            border-radius: var(--radius-md);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .trust-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .trust-card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .trust-card-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .trust-card:nth-child(1) .trust-card-icon { background: rgba(85, 239, 196, 0.2); color: #00b894; }
+        .trust-card:nth-child(2) .trust-card-icon { background: rgba(162, 155, 254, 0.2); color: #6c5ce7; }
+        .trust-card:nth-child(3) .trust-card-icon { background: rgba(250, 177, 160, 0.2); color: #e17055; }
+
+        .trust-card h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .trust-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Topics Network Section */
+        .topics-section {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .topics-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .topics-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .topics-header h2 {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .topics-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 900px) {
+            .topics-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 500px) {
+            .topics-grid { grid-template-columns: 1fr; }
+        }
+
+        .topic-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .topic-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .topic-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .topic-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: white;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .topic-card.mental .topic-icon { background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%); }
+        .topic-card.glp1 .topic-icon { background: linear-gradient(135deg, #55efc4 0%, #00b894 100%); }
+        .topic-card.symptom .topic-icon { background: linear-gradient(135deg, #81ecec 0%, #00cec9 100%); }
+        .topic-card.patient .topic-icon { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
+        .topic-card.hipaa .topic-icon { background: linear-gradient(135deg, #636e72 0%, #2d3436 100%); }
+        .topic-card.claims .topic-icon { background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); }
+        .topic-card.claims .topic-icon svg { stroke: #946b00; }
+        .topic-card.colonoscopy .topic-icon { background: linear-gradient(135deg, #fab1a0 0%, #e17055 100%); }
+        .topic-card.mammogram .topic-icon { background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%); }
+
+        .topic-card h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .topic-domain {
+            font-size: 0.85rem;
+            color: var(--sage);
+            font-weight: 500;
+        }
+
+        .topic-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .topic-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--sage);
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        .topic-link svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.2s ease;
+        }
+
+        .topic-card:hover .topic-link svg {
+            transform: translateX(4px);
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            padding: 6rem 2rem;
+            background: var(--gradient-sage);
+        }
+
+        .newsletter-inner {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+        }
+
+        .newsletter-inner h2 {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-inner p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 100px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.2);
+        }
+
+        .newsletter-btn {
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--sage);
+            border: none;
+            border-radius: 100px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem 2rem;
+            background: var(--text-primary);
+            color: white;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-legal a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-legal a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-badges {
+                justify-content: center;
+            }
+
+            .chat-widget {
+                margin: 0 auto;
+            }
+
+            .trust-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 7rem 1.5rem 3rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .chat-widget {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Split-mode chat panel (hidden initially) -->
+    <div class="chat-panel" id="chat-panel" style="display: none;">
+        <div class="panel-header">
+            <button class="chat-close" onclick="closeSplitMode()">✕</button>
+            <h3>Ask anything about health</h3>
+            <p>Get evidence-based answers instantly</p>
+        </div>
+        <div id="panel-messages" class="panel-messages"></div>
+        <div class="panel-input-area">
+            <textarea id="panel-input" class="panel-input" placeholder="Ask a follow-up question..." rows="1"></textarea>
+            <button class="chat-send" onclick="askQuestion()">
+                <span class="qa-btn-text"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="white"/></svg></span>
+                <span class="qa-spinner" style="display:none;color:white;">...</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="logo">
+                thrive<span class="logo-dot"></span>md
+            </a>
+            <ul class="nav-links">
+                <li><a href="/topics.html">Health Topics</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#editorial">Our Standards</a></li>
+                <li><a href="#blog">Articles</a></li>
+            </ul>
+            <a href="#ask" class="nav-cta" onclick="event.preventDefault(); activateSplitMode(); document.getElementById('panel-input').focus();">Ask a Question</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="ask">
+        <div class="hero-bg"></div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1>Your health journey,<br><span>compassionately guided</span></h1>
+                <p>Evidence-based answers to your health questions, written by experts and powered by AI that actually understands you.</p>
+                <div class="hero-badges">
+                    <div class="badge">
+                        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Medically Reviewed
+                    </div>
+                    <div class="badge">
+                        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        Privacy First
+                    </div>
+                    <div class="badge">
+                        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                        24/7 Available
+                    </div>
+                </div>
+            </div>
+            <div class="chat-widget">
+                <div class="chat-header">
+                    <h3>Ask anything about your health</h3>
+                    <p>Get instant, evidence-based answers</p>
+                </div>
+                <div class="chat-body">
+                    <div id="chat-messages" class="chat-messages"></div>
+                    <div class="chat-input-wrapper chat-input-area">
+                        <input type="text" id="qa-input" class="chat-input" placeholder="What would you like to know?" onkeydown="if(event.key==='Enter'){event.preventDefault();askQuestion();}">
+                        <button class="chat-send" onclick="askQuestion()">
+                            <span id="qa-btn-text"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="white"/></svg></span>
+                            <span id="qa-spinner" style="display:none;color:white;">...</span>
+                        </button>
+                    </div>
+                    <div id="qa-suggestions" class="chat-suggestions">
+                        <span class="chat-suggestion" onclick="fillQuestion(this)">What causes anxiety?</span>
+                        <span class="chat-suggestion" onclick="fillQuestion(this)">GLP-1 side effects</span>
+                        <span class="chat-suggestion" onclick="fillQuestion(this)">Better sleep tips</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="trust-inner">
+            <h2>Health information you can trust</h2>
+            <p>We believe everyone deserves access to reliable, compassionate health guidance — without the confusion or judgment.</p>
+            <div class="trust-cards">
+                <div class="trust-card">
+                    <div class="trust-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            <path d="M8 7h8M8 11h8M8 15h5"/>
+                        </svg>
+                    </div>
+                    <h3>Evidence-Based</h3>
+                    <p>Every piece of content is grounded in peer-reviewed research and clinical guidelines. We cite our sources so you can verify everything.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>Expert Reviewed</h3>
+                    <p>Our medical review board includes practicing physicians, researchers, and mental health professionals who ensure accuracy.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>Judgment-Free</h3>
+                    <p>Health is personal. We provide information with empathy and without shame — because you deserve support, not lectures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Network Section -->
+    <section class="topics-section" id="topics">
+        <div class="topics-inner">
+            <div class="topics-header">
+                <h2>Explore health topics</h2>
+                <p>Deep-dive into specific areas of health with our specialized guides, each focused on helping you understand and thrive.</p>
+            </div>
+            <div class="topics-grid">
+                <a href="https://mental.md" class="topic-card mental">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <span class="topic-domain">mental.md</span>
+                    <h3>Mental Health</h3>
+                    <p>Understanding depression, therapy options, and building emotional resilience.</p>
+                    <span class="topic-link">
+                        Explore
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://glp1.md" class="topic-card glp1">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20V10"/>
+                            <path d="M18 20V4"/>
+                            <path d="M6 20v-4"/>
+                        </svg>
+                    </div>
+                    <span class="topic-domain">glp1.md</span>
+                    <h3>Weight & GLP-1s</h3>
+                    <p>Ozempic, Wegovy, Mounjaro — understanding the new weight loss medications.</p>
+                    <span class="topic-link">
+                        Explore
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://symptom.md" class="topic-card symptom">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <span class="topic-domain">symptom.md</span>
+                    <h3>Symptom Checker</h3>
+                    <p>Understand your symptoms with evidence-based guidance on what they may mean.</p>
+                    <span class="topic-link">
+                        Explore
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://patient.md" class="topic-card patient">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <span class="topic-domain">patient.md</span>
+                    <h3>Patient Rights</h3>
+                    <p>Know your rights as a patient — informed consent, records access, and advocacy.</p>
+                    <span class="topic-link">
+                        Explore
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://hipaa.md" class="topic-card hipaa">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <span class="topic-domain">hipaa.md</span>
+                    <h3>HIPAA & Privacy</h3>
+                    <p>Your health data privacy rights explained — HIPAA rules in plain language.</p>
+                    <span class="topic-link">
+                        Explore
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://claims.md" class="topic-card claims">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <span class="topic-domain">claims.md</span>
+                    <h3>Insurance Claims</h3>
+                    <p>Navigate medical billing, appeals, and denied claims with confidence.</p>
+                    <span class="topic-link">
+                        Explore
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://colonoscopy.md" class="topic-card colonoscopy">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <span class="topic-domain">colonoscopy.md</span>
+                    <h3>Colonoscopy</h3>
+                    <p>Prep guides, screening timelines, and what to expect before and after.</p>
+                    <span class="topic-link">
+                        Explore
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://mammogram.md" class="topic-card mammogram">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span class="topic-domain">mammogram.md</span>
+                    <h3>Mammogram</h3>
+                    <p>Screening guidelines, what to expect, and understanding your results.</p>
+                    <span class="topic-link">
+                        Explore
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="/topics.html" style="display:inline-flex; align-items:center; gap:0.5rem; color:#0d9488; font-weight:600; font-size:1.1rem; text-decoration:none; padding:0.75rem 2rem; border:2px solid #0d9488; border-radius:100px; transition:all 0.2s ease;" onmouseover="this.style.background='#0d9488';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#0d9488'">
+                    Explore all 25 health topics
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-inner">
+            <h2>Weekly wellness, no spam</h2>
+            <p>Join 10,000+ readers getting evidence-based health insights delivered every Tuesday.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email">
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>thrive<span class="logo-dot"></span>md</h3>
+                    <p>Empowering you with trustworthy health information and compassionate guidance for your wellness journey.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Topics</h4>
+                    <ul>
+                        <li><a href="/topics.html#mental-health">Mental Health</a></li>
+                        <li><a href="/topics.html#weight">Weight & Metabolic</a></li>
+                        <li><a href="/topics.html#chronic">Chronic Conditions</a></li>
+                        <li><a href="/topics.html#screenings">Screenings & Procedures</a></li>
+                        <li><a href="/topics.html#patient-tools">Patient Tools</a></li>
+                        <li><a href="/topics.html#industry">Healthcare Industry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/thrive-homepage.html#about">About Us</a></li>
+                        <li><a href="/editorial-policy.html">Editorial Policy</a></li>
+                        <li><a href="/medical-review.html">Medical Review</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog.html">Health Articles</a></li>
+                        <li><a href="/resources.html">Crisis Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 thrive.md — A trusted source for health information</p>
+                <div class="footer-legal">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/disclaimer">Medical Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // API Configuration
+        const isLocal = window.location.hostname === 'localhost' 
+            || window.location.hostname === '127.0.0.1';
+        const QA_API = isLocal 
+            ? 'http://localhost:3847/ask'
+            : 'https://md-qa.md-health.workers.dev/ask';
+        
+        const SESSION_ID = 'session_' + Math.random().toString(36).substr(2, 9);
+        
+        // Typewriter for streaming effect
+        class Typewriter {
+            constructor(element, speed = 8) {
+                this.element = element;
+                this.speed = speed;
+                this.queue = [];
+                this.isTyping = false;
+                this.fullText = '';
+            }
+            add(text) {
+                this.fullText += text;
+                this.queue.push(...text.split(''));
+                if (!this.isTyping) this.type();
+            }
+            type() {
+                if (this.queue.length === 0) { this.isTyping = false; return; }
+                this.isTyping = true;
+                const chars = Math.min(2 + Math.floor(Math.random() * 4), this.queue.length);
+                for (let i = 0; i < chars; i++) {
+                    this.element.textContent += this.queue.shift();
+                }
+                const delay = this.speed + Math.random() * 8;
+                setTimeout(() => this.type(), delay);
+            }
+            finish() {
+                return new Promise(resolve => {
+                    const check = () => {
+                        if (!this.isTyping && this.queue.length === 0) {
+                            resolve(this.fullText);
+                        } else {
+                            setTimeout(check, 50);
+                        }
+                    };
+                    check();
+                });
+            }
+        }
+        
+        let splitModeActive = false;
+        
+        function getActiveMessagesDiv() {
+            return splitModeActive 
+                ? document.getElementById('panel-messages')
+                : document.getElementById('chat-messages');
+        }
+        
+        function getActiveInput() {
+            return splitModeActive
+                ? document.getElementById('panel-input')
+                : document.getElementById('qa-input');
+        }
+        
+        function activateSplitMode() {
+            if (splitModeActive) return;
+            splitModeActive = true;
+            
+            document.body.classList.add('split-mode');
+            const panel = document.getElementById('chat-panel');
+            panel.style.display = 'flex';
+            
+            // Move existing messages to panel
+            const heroMessages = document.getElementById('chat-messages');
+            const panelMessages = document.getElementById('panel-messages');
+            panelMessages.innerHTML = heroMessages.innerHTML;
+            
+            // Focus panel input
+            document.getElementById('panel-input').focus();
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function closeSplitMode() {
+            splitModeActive = false;
+            document.body.classList.remove('split-mode');
+            document.getElementById('chat-panel').style.display = 'none';
+            
+            // Keep messages in hero
+            const panelMessages = document.getElementById('panel-messages');
+            const heroMessages = document.getElementById('chat-messages');
+            heroMessages.innerHTML = panelMessages.innerHTML;
+            if (heroMessages.innerHTML) heroMessages.classList.add('active');
+        }
+        
+        function fillQuestion(el) {
+            const input = getActiveInput();
+            input.value = el.textContent;
+            input.focus();
+        }
+        
+        function addMessage(text, isUser = false) {
+            const messagesDiv = getActiveMessagesDiv();
+            messagesDiv.classList.add('active');
+            
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `chat-message ${isUser ? 'user' : 'assistant'}`;
+            msgDiv.innerHTML = `
+                <div class="chat-avatar">${isUser ? 'You' : 'MD'}</div>
+                <div class="chat-bubble"><p>${text}</p></div>
+            `;
+            
+            messagesDiv.appendChild(msgDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            return msgDiv;
+        }
+        
+        function formatResponse(answer) {
+            let html = answer
+                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener" style="color: var(--sage);">$1</a>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/\n/g, '<br>');
+            
+            const parts = html.split(/⚕️/);
+            let output = parts[0];
+            if (parts[1]) {
+                output += `</p><p class="disclaimer" style="font-size: 12px; color: var(--text-muted); margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(0,0,0,0.06);">⚕️${parts[1]}`;
+            }
+            return output;
+        }
+        
+        async function askQuestion() {
+            const input = getActiveInput();
+            const question = input.value.trim();
+            
+            if (!question) return;
+            
+            // Hide suggestions
+            const suggestions = document.getElementById('qa-suggestions');
+            if (suggestions) suggestions.style.display = 'none';
+            
+            // Add user message
+            addMessage(question, true);
+            input.value = '';
+            
+            // Activate split mode after first question
+            if (!splitModeActive) {
+                activateSplitMode();
+            }
+            
+            const activeMessagesDiv = getActiveMessagesDiv();
+            
+            // Get active button elements
+            const activeInput = getActiveInput();
+            const activeBtn = activeInput.closest('.chat-input-area, .panel-input-area').querySelector('.chat-send');
+            const activeBtnText = activeBtn.querySelector('.qa-btn-text, #qa-btn-text');
+            const activeSpinner = activeBtn.querySelector('.qa-spinner, #qa-spinner');
+            
+            activeBtn.disabled = true;
+            if (activeBtnText) activeBtnText.style.display = 'none';
+            if (activeSpinner) activeSpinner.style.display = 'inline-flex';
+            
+            // Create response bubble with streaming cursor
+            const responseDiv = document.createElement('div');
+            responseDiv.className = 'chat-message assistant';
+            responseDiv.innerHTML = `
+                <div class="chat-avatar">MD</div>
+                <div class="chat-bubble"><p><span class="streaming-text"></span><span class="cursor" style="display:inline-block;width:2px;height:1em;background:var(--sage);margin-left:2px;animation:blink 1s infinite;vertical-align:middle;"></span></p></div>
+            `;
+            activeMessagesDiv.appendChild(responseDiv);
+            const streamingText = responseDiv.querySelector('.streaming-text');
+            const cursor = responseDiv.querySelector('.cursor');
+            
+            const typewriter = new Typewriter(streamingText, 15);
+            
+            try {
+                const res = await fetch(QA_API, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question, sessionId: SESSION_ID }),
+                });
+                
+                if (!res.ok) {
+                    const error = await res.json();
+                    throw new Error(error.error || 'Request failed');
+                }
+                
+                // Read SSE stream
+                const reader = res.body.getReader();
+                const decoder = new TextDecoder();
+                
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    
+                    const chunk = decoder.decode(value);
+                    const lines = chunk.split('\n');
+                    
+                    for (const line of lines) {
+                        if (line.startsWith('data: ')) {
+                            const data = line.slice(6);
+                            if (data === '[DONE]') continue;
+                            
+                            try {
+                                const parsed = JSON.parse(data);
+                                if (parsed.text) {
+                                    typewriter.add(parsed.text);
+                                }
+                            } catch (e) {}
+                        }
+                    }
+                }
+                
+                const finalText = await typewriter.finish();
+                cursor.remove();
+                responseDiv.querySelector('.chat-bubble').innerHTML = `<p>${formatResponse(finalText)}</p>`;
+                
+            } catch (err) {
+                cursor.remove();
+                streamingText.innerHTML = `<span style="color: #ef4444;">Sorry, something went wrong: ${err.message}</span>`;
+            }
+            
+            // Reset button
+            activeBtn.disabled = false;
+            if (activeBtnText) activeBtnText.style.display = 'inline-flex';
+            if (activeSpinner) activeSpinner.style.display = 'none';
+            
+            activeMessagesDiv.scrollTop = activeMessagesDiv.scrollHeight;
+            activeInput.focus();
+        }
+        
+        // Handle Enter key in panel input
+        document.getElementById('panel-input').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                askQuestion();
+            }
+        });
+    </script>
+
+</body>
+</html>
