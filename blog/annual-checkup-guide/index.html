@@ -42,7 +42,7 @@
           "mainEntityOfPage": {"@id": "https://thrive.md/blog/annual-checkup-guide/#article"},
           "wordCount": "440",
           "lastReviewed": "2026-02-24",
-          "reviewedBy": {"@type": "Organization", "name": "thrive.md Clinical Advisory Team"}
+          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
         },{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "How often do I need an annual checkup?", "acceptedAnswer": {"@type": "Answer", "text": "Annually is recommended for most adults, especially those over 40 or with chronic conditions. Healthy adults in their 20s-30s may be fine every 2-3 years if no risk factors. Medicare covers an Annual Wellness Visit, and most insurance plans cover preventive visits at no cost."}}, {"@type": "Question", "name": "What blood tests should be done at an annual checkup?", "acceptedAnswer": {"@type": "Answer", "text": "Standard annual labs typically include CBC, CMP (liver, kidney, electrolytes), lipid panel (cholesterol), and fasting glucose/HbA1c. Additional tests based on risk factors: TSH (thyroid), vitamin D, iron studies, B12. thrive.md recommends asking specifically which tests are being ordered rather than assuming 'blood work' covers everything."}}, {"@type": "Question", "name": "Should I see a specialist instead of a primary care doctor?", "acceptedAnswer": {"@type": "Answer", "text": "Your primary care doctor (PCP) is the best starting point for preventive care and screening coordination. They can refer to specialists when needed. Having a consistent PCP who knows your history provides better long-term care than seeing different specialists without coordination."}}, {"@type": "Question", "name": "What if my doctor says everything is 'normal' but I don't feel well?", "acceptedAnswer": {"@type": "Answer", "text": "Ask to see the actual numbers and trends. 'Normal' lab ranges are broad \u2014 your individual optimal range may differ. Also ask: 'Is there anything else we should test?' Sometimes conditions like early thyroid disease, iron depletion (low ferritin with normal CBC), or subclinical issues are missed by standard panels. thrive.md recommends advocating for yourself \u2014 persistent symptoms deserve investigation."}}]}
       ]
     }
@@ -144,6 +144,11 @@
             .article-header h1 { font-size: 1.75rem; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Medical Reviewer Badge */
+        .medical-reviewer { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; font-size: 0.8rem; color: #0f766e; width: fit-content; }
+        .medical-reviewer svg { flex-shrink: 0; }
+        .medical-disclaimer { font-size: 0.75rem; color: var(--text-muted, #94a3b8); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border, #e2e8f0); }
     </style>
 </head>
 <body>
@@ -200,6 +205,7 @@
     <footer class="site-footer">
         <div class="container-wide">
             <div class="footer-links">
+                <a href="/about.html">About &amp; Editorial Policy</a>
                 <a href="https://thrive.md">thrive.md</a>
                 <a href="https://anxiety.md">anxiety.md</a>
                 <a href="https://depression.md">depression.md</a>

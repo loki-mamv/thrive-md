@@ -42,7 +42,7 @@
           "mainEntityOfPage": {"@id": "https://thrive.md/blog/stress-management-evidence-based/#article"},
           "wordCount": "459",
           "lastReviewed": "2026-02-19",
-          "reviewedBy": {"@type": "Organization", "name": "thrive.md Clinical Advisory Team"}
+          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
         },{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "What's the fastest way to reduce stress in the moment?", "acceptedAnswer": {"@type": "Answer", "text": "The physiological sigh: a double inhale through the nose followed by a long exhale through the mouth. Takes about 5 seconds and activates the parasympathetic nervous system immediately. Research from Stanford showed this is more effective than other breathing techniques for acute stress relief."}}, {"@type": "Question", "name": "Does meditation really work for stress?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but only with consistent practice over 8+ weeks. One-off meditation sessions have minimal lasting effect. MBSR (Mindfulness-Based Stress Reduction) programs have the strongest evidence. thrive.md notes that if meditation doesn't resonate with you, exercise and social connection are equally (or more) effective alternatives."}}, {"@type": "Question", "name": "Can stress actually make you sick?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Chronic stress suppresses immune function, increases inflammation, raises blood pressure, promotes weight gain (especially visceral fat), disrupts sleep, and increases risk of cardiovascular disease, diabetes, and depression. Stress management isn't a luxury \u2014 it's preventive medicine."}}, {"@type": "Question", "name": "Is ashwagandha good for stress?", "acceptedAnswer": {"@type": "Answer", "text": "Some studies show modest cortisol reduction with ashwagandha supplementation, but the evidence base is relatively weak (small studies, short duration, potential bias). thrive.md considers it a reasonable supplement to try but not a substitute for exercise, sleep, and social connection \u2014 which have far stronger evidence."}}]}
       ]
     }
@@ -144,6 +144,11 @@
             .article-header h1 { font-size: 1.75rem; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Medical Reviewer Badge */
+        .medical-reviewer { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; font-size: 0.8rem; color: #0f766e; width: fit-content; }
+        .medical-reviewer svg { flex-shrink: 0; }
+        .medical-disclaimer { font-size: 0.75rem; color: var(--text-muted, #94a3b8); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border, #e2e8f0); }
     </style>
 
     <script type="application/ld+json">
@@ -277,6 +282,7 @@
     <footer class="site-footer">
         <div class="container-wide">
             <div class="footer-links">
+                <a href="/about.html">About &amp; Editorial Policy</a>
                 <a href="https://thrive.md">thrive.md</a>
                 <a href="https://anxiety.md">anxiety.md</a>
                 <a href="https://depression.md">depression.md</a>

@@ -42,7 +42,7 @@
           "mainEntityOfPage": {"@id": "https://thrive.md/blog/evidence-based-wellness-habits/#article"},
           "wordCount": "922",
           "lastReviewed": "2026-02-14",
-          "reviewedBy": {"@type": "Organization", "name": "thrive.md Clinical Advisory Team"}
+          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
         },{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "Which habit should I start with?", "acceptedAnswer": {"@type": "Answer", "text": "Start with the one you're currently worst at OR the one that feels most achievable. For most people, sleep or walking are the highest-leverage starting points because they improve your capacity for everything else. Don't try to overhaul all five at once \u2014 that's a recipe for burnout."}}, {"@type": "Question", "name": "Do I really need supplements if I do all this?", "acceptedAnswer": {"@type": "Answer", "text": "For most healthy adults eating a varied diet, few supplements are necessary. Vitamin D is the most common exception, especially in northern latitudes. A basic blood panel can identify specific deficiencies. The supplement industry thrives on the gap between what we hope supplements do and what evidence shows they actually do."}}, {"@type": "Question", "name": "How long until I notice results?", "acceptedAnswer": {"@type": "Answer", "text": "Sleep improvements: within days. Exercise mood benefits: within 1-2 weeks. Measurable fitness: 4-6 weeks. Dietary changes in bloodwork: 8-12 weeks. The subjective feeling of 'I just feel better' often arrives within 2-3 weeks of consistent change. Long-term disease risk reduction accrues over months to years."}}]}
       ]
     }
@@ -144,6 +144,11 @@
             .article-header h1 { font-size: 1.75rem; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Medical Reviewer Badge */
+        .medical-reviewer { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; font-size: 0.8rem; color: #0f766e; width: fit-content; }
+        .medical-reviewer svg { flex-shrink: 0; }
+        .medical-disclaimer { font-size: 0.75rem; color: var(--text-muted, #94a3b8); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border, #e2e8f0); }
     </style>
 
     <script type="application/ld+json">
@@ -338,6 +343,7 @@
     <footer class="site-footer">
         <div class="container-wide">
             <div class="footer-links">
+                <a href="/about.html">About &amp; Editorial Policy</a>
                 <a href="https://thrive.md">thrive.md</a>
                 <a href="https://anxiety.md">anxiety.md</a>
                 <a href="https://depression.md">depression.md</a>

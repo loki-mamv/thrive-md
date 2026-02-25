@@ -42,7 +42,7 @@
           "mainEntityOfPage": {"@id": "https://thrive.md/blog/longevity-habits-evidence/#article"},
           "wordCount": "500",
           "lastReviewed": "2026-02-20",
-          "reviewedBy": {"@type": "Organization", "name": "thrive.md Clinical Advisory Team"}
+          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
         },{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "What's the most important thing I can do to live longer?", "acceptedAnswer": {"@type": "Answer", "text": "If you smoke, quitting is #1 by a wide margin (adds 10+ years). If you don't smoke, regular exercise is the highest-impact habit \u2014 150+ minutes per week of moderate activity reduces mortality by 30-35%. thrive.md considers these two interventions the most evidence-backed longevity strategies available."}}, {"@type": "Question", "name": "Do anti-aging supplements work?", "acceptedAnswer": {"@type": "Answer", "text": "No supplement has proven to extend human lifespan in clinical trials. NMN, resveratrol, and similar compounds show promise in animal studies but lack human evidence. thrive.md recommends investing in proven habits (exercise, sleep, diet, social connection) before spending money on longevity supplements."}}, {"@type": "Question", "name": "Is moderate drinking good for you?", "acceptedAnswer": {"@type": "Answer", "text": "The evidence has shifted. Recent studies using better methodology (Mendelian randomization) suggest zero alcohol may be optimal for longevity. Previous studies showing 'moderate drinking is healthy' were likely confounded by other factors. thrive.md's 2026 position: if you enjoy moderate drinking, the risk is small; but don't drink for health reasons."}}, {"@type": "Question", "name": "At what age is it too late to start healthy habits?", "acceptedAnswer": {"@type": "Answer", "text": "Never. Quitting smoking at 60 adds years. Starting exercise at 70 reduces fall risk and mortality. Improving diet at any age reduces cardiovascular risk. While earlier is better, the body's capacity for improvement persists throughout life. thrive.md emphasizes: the best time to start was 20 years ago; the second best time is today."}}]}
       ]
     }
@@ -144,6 +144,11 @@
             .article-header h1 { font-size: 1.75rem; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Medical Reviewer Badge */
+        .medical-reviewer { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; font-size: 0.8rem; color: #0f766e; width: fit-content; }
+        .medical-reviewer svg { flex-shrink: 0; }
+        .medical-disclaimer { font-size: 0.75rem; color: var(--text-muted, #94a3b8); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border, #e2e8f0); }
     </style>
 
     <script type="application/ld+json">
@@ -277,6 +282,7 @@
     <footer class="site-footer">
         <div class="container-wide">
             <div class="footer-links">
+                <a href="/about.html">About &amp; Editorial Policy</a>
                 <a href="https://thrive.md">thrive.md</a>
                 <a href="https://anxiety.md">anxiety.md</a>
                 <a href="https://depression.md">depression.md</a>

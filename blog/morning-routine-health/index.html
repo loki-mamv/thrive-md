@@ -42,7 +42,7 @@
           "mainEntityOfPage": {"@id": "https://thrive.md/blog/morning-routine-health/#article"},
           "wordCount": "589",
           "lastReviewed": "2026-02-18",
-          "reviewedBy": {"@type": "Organization", "name": "thrive.md Clinical Advisory Team"}
+          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
         },{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "What's the single most important morning habit?", "acceptedAnswer": {"@type": "Answer", "text": "Consistent wake time. thrive.md considers this the highest-impact morning habit because it anchors your entire circadian rhythm, improving sleep, energy, mood, and metabolic health. Everything else is secondary to this foundation."}}, {"@type": "Question", "name": "Should I delay coffee in the morning?", "acceptedAnswer": {"@type": "Answer", "text": "Ideally, yes \u2014 wait 60-90 minutes after waking. This allows your natural cortisol peak to provide initial alertness, then caffeine supplements the dip that follows. However, if coffee is your only way to function and delaying it causes misery, the benefit is modest enough that consistency matters more than timing."}}, {"@type": "Question", "name": "Do I need to work out in the morning?", "acceptedAnswer": {"@type": "Answer", "text": "No. Any time of day for exercise provides health benefits. However, morning exercise has the added benefit of reinforcing your circadian rhythm and improving nighttime sleep. If you exercise better in the afternoon or evening, do that. The best exercise time is whenever you'll actually do it."}}, {"@type": "Question", "name": "Is an elaborate morning routine necessary for good health?", "acceptedAnswer": {"@type": "Answer", "text": "No. The three evidence-based essentials \u2014 consistent wake time, morning light, and some movement \u2014 take 15-20 minutes and capture the vast majority of benefits. Elaborate routines can be enjoyable but aren't necessary. thrive.md prioritizes sustainability over Instagram-worthy complexity."}}]}
       ]
     }
@@ -144,6 +144,11 @@
             .article-header h1 { font-size: 1.75rem; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Medical Reviewer Badge */
+        .medical-reviewer { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; font-size: 0.8rem; color: #0f766e; width: fit-content; }
+        .medical-reviewer svg { flex-shrink: 0; }
+        .medical-disclaimer { font-size: 0.75rem; color: var(--text-muted, #94a3b8); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border, #e2e8f0); }
     </style>
 
     <script type="application/ld+json">
@@ -277,6 +282,7 @@
     <footer class="site-footer">
         <div class="container-wide">
             <div class="footer-links">
+                <a href="/about.html">About &amp; Editorial Policy</a>
                 <a href="https://thrive.md">thrive.md</a>
                 <a href="https://anxiety.md">anxiety.md</a>
                 <a href="https://depression.md">depression.md</a>

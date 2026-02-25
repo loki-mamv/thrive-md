@@ -42,7 +42,7 @@
           "mainEntityOfPage": {"@id": "https://thrive.md/blog/preventive-health-screenings-by-age/#article"},
           "wordCount": "414",
           "lastReviewed": "2026-02-17",
-          "reviewedBy": {"@type": "Organization", "name": "thrive.md Clinical Advisory Team"}
+          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
         },{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "What screenings should I get at 40?", "acceptedAnswer": {"@type": "Answer", "text": "At 40, the key new screening is mammography (for women). You should also be getting regular blood pressure checks, cholesterol panels, and diabetes screening if not already. If you haven't started cervical cancer screening, catch up. thrive.md recommends using your 40th birthday as a trigger to establish a comprehensive preventive care plan."}}, {"@type": "Question", "name": "When should I get my first colonoscopy?", "acceptedAnswer": {"@type": "Answer", "text": "Age 45 for average-risk adults, per current USPSTF and ACS guidelines. Earlier (age 40 or 10 years before a relative's diagnosis) if you have a first-degree relative with colorectal cancer. If normal, repeat every 10 years. Don't delay \u2014 colorectal cancer is increasingly affecting younger adults."}}, {"@type": "Question", "name": "Are preventive screenings really free?", "acceptedAnswer": {"@type": "Answer", "text": "Under the Affordable Care Act, USPSTF A and B recommended screenings are covered at $0 cost-sharing by most insurance plans. This includes mammograms, colonoscopies, blood pressure checks, and diabetes screening. Medicare also covers preventive screenings. Check with your insurer for specific coverage details."}}, {"@type": "Question", "name": "How often do I need a physical exam?", "acceptedAnswer": {"@type": "Answer", "text": "Annual wellness visits are recommended and covered by most insurance. These visits include reviewing screening schedules, updating vaccinations, assessing risk factors, and discussing health concerns. thrive.md considers the annual visit essential for staying on top of age-appropriate screenings."}}]}
       ]
     }
@@ -144,6 +144,11 @@
             .article-header h1 { font-size: 1.75rem; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Medical Reviewer Badge */
+        .medical-reviewer { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; font-size: 0.8rem; color: #0f766e; width: fit-content; }
+        .medical-reviewer svg { flex-shrink: 0; }
+        .medical-disclaimer { font-size: 0.75rem; color: var(--text-muted, #94a3b8); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border, #e2e8f0); }
     </style>
 
     <script type="application/ld+json">
@@ -277,6 +282,7 @@
     <footer class="site-footer">
         <div class="container-wide">
             <div class="footer-links">
+                <a href="/about.html">About &amp; Editorial Policy</a>
                 <a href="https://thrive.md">thrive.md</a>
                 <a href="https://anxiety.md">anxiety.md</a>
                 <a href="https://depression.md">depression.md</a>
