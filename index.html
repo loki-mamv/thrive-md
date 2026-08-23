@@ -32,102 +32,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>thrive.md — Your Trusted Health Companion</title>
+    <link rel="canonical" href="https://thrive.md/">
     <meta name="description" content="Evidence-based health information, AI-powered answers, and compassionate guidance for your wellness journey.">
     
     <!-- Schema.org Structured Data for GEO/AI Search Optimization -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://thrive.md/#organization",
-          "name": "thrive.md",
-          "url": "https://thrive.md",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://thrive.md/logo.png"
-          },
-          "description": "A network of 25 premium health domains providing evidence-based medical information reviewed by clinicians.",
-          "sameAs": [
-            "https://anxiety.md",
-            "https://mental.md",
-            "https://glp1.md"
-          ],
-          "knowsAbout": [
-            "Mental Health",
-            "Anxiety Disorders",
-            "GLP-1 Medications",
-            "Preventive Health Screenings",
-            "Patient Rights",
-            "Health Insurance"
-          ]
+      "@type": "Organization",
+      "@id": "https://thrive.md/#organization",
+      "name": "thrive.md",
+      "url": "https://thrive.md",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thrive.md/logo.png"
+      },
+      "description": "A network of 25 premium health domains providing evidence-based medical information reviewed by clinicians.",
+      "sameAs": [
+        "https://anxiety.md",
+        "https://mental.md",
+        "https://glp1.md"
+      ],
+      "knowsAbout": [
+        "Mental Health",
+        "Anxiety Disorders",
+        "GLP-1 Medications",
+        "Preventive Health Screenings",
+        "Patient Rights",
+        "Health Insurance"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thrive.md/#website",
+      "url": "https://thrive.md",
+      "name": "thrive.md — Your Trusted Health Companion",
+      "description": "Evidence-based health information across 25 specialized domains",
+      "publisher": {
+        "@id": "https://thrive.md/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://thrive.md/?q={search_term_string}"
         },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://thrive.md/#webpage",
+      "url": "https://thrive.md",
+      "name": "thrive.md — Your Trusted Health Companion",
+      "description": "Evidence-based health information, AI-powered answers, and compassionate guidance for your wellness journey.",
+      "isPartOf": {
+        "@id": "https://thrive.md/#website"
+      },
+      "about": {
+        "@type": "MedicalBusiness",
+        "name": "Health Information Network"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".hero-content h1",
+          ".hero-content p",
+          ".trust-section h2"
+        ]
+      },
+      "lastReviewed": "2026-02-04",
+      "reviewedBy": {
+        "@type": "Person",
+        "name": "Dr. Agustin Arrieta",
+        "jobTitle": "MD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "WebSite",
-          "@id": "https://thrive.md/#website",
-          "url": "https://thrive.md",
-          "name": "thrive.md — Your Trusted Health Companion",
-          "description": "Evidence-based health information across 25 specialized domains",
-          "publisher": {"@id": "https://thrive.md/#organization"},
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://thrive.md/?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
+          "@type": "Question",
+          "name": "What causes anxiety?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anxiety can be caused by a combination of genetic factors, brain chemistry, personality traits, and life events. Stressful experiences, trauma, and chronic health conditions can also trigger anxiety disorders."
           }
         },
         {
-          "@type": "MedicalWebPage",
-          "@id": "https://thrive.md/#webpage",
-          "url": "https://thrive.md",
-          "name": "thrive.md — Your Trusted Health Companion",
-          "description": "Evidence-based health information, AI-powered answers, and compassionate guidance for your wellness journey.",
-          "isPartOf": {"@id": "https://thrive.md/#website"},
-          "about": {
-            "@type": "MedicalBusiness",
-            "name": "Health Information Network"
-          },
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": [".hero-content h1", ".hero-content p", ".trust-section h2"]
-          },
-          "lastReviewed": "2026-02-04",
-          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
+          "@type": "Question",
+          "name": "What are GLP-1 medications?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GLP-1 medications like Ozempic, Wegovy, and Mounjaro are injectable drugs that mimic the GLP-1 hormone, helping regulate blood sugar and reduce appetite. They are FDA-approved for type 2 diabetes and weight management."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What causes anxiety?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Anxiety can be caused by a combination of genetic factors, brain chemistry, personality traits, and life events. Stressful experiences, trauma, and chronic health conditions can also trigger anxiety disorders."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What are GLP-1 medications?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "GLP-1 medications like Ozempic, Wegovy, and Mounjaro are injectable drugs that mimic the GLP-1 hormone, helping regulate blood sugar and reduce appetite. They are FDA-approved for type 2 diabetes and weight management."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "When should I get a colonoscopy?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The American Cancer Society recommends adults at average risk start colorectal cancer screening at age 45. Those with family history or other risk factors may need to start earlier."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "When should I get a colonoscopy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The American Cancer Society recommends adults at average risk start colorectal cancer screening at age 45. Those with family history or other risk factors may need to start earlier."
+          }
         }
       ]
     }
+  ]
+}
     </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1435,6 +1448,20 @@
         });
     }
     </script>
+        <section class="section" id="faq">
+            <div class="section-label" style="font-size: 12px; font-weight: 600; color: var(--accent, #0d9488); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">FAQ</div>
+            <h2>Frequently asked questions</h2>
+            <div style="margin-top: 20px;">
+                <div style="border-bottom: 1px solid var(--border, #e2e8f0); padding: 20px 0;">
+                    <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; font-family: var(--font-display, Georgia, serif);">What are GLP-1 medications?</h3>
+                    <p style="font-size: 16px; color: var(--text-secondary, #475569); margin: 0;">GLP-1 medications like Ozempic, Wegovy, and Mounjaro are injectable drugs that mimic the GLP-1 hormone, helping regulate blood sugar and reduce appetite. They are FDA-approved for type 2 diabetes and weight management.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--border, #e2e8f0); padding: 20px 0;">
+                    <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; font-family: var(--font-display, Georgia, serif);">When should I get a colonoscopy?</h3>
+                    <p style="font-size: 16px; color: var(--text-secondary, #475569); margin: 0;">The American Cancer Society recommends adults at average risk start colorectal cancer screening at age 45. Those with family history or other risk factors may need to start earlier.</p>
+                </div>
+            </div>
+        </section>
 
     <footer>
         <div class="footer-inner">
@@ -1457,7 +1484,7 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="/thrive-homepage.html#about">About Us</a></li>
+                        <li><a href="/about.html">About Us</a></li>
                         <li><a href="/editorial-policy.html">Editorial Policy</a></li>
                         <li><a href="/medical-review.html">Medical Review</a></li>
                         <li><a href="/contact.html">Contact</a></li>
@@ -1466,17 +1493,14 @@
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="/blog.html">Health Articles</a></li>
-                        <li><a href="/resources.html">Crisis Resources</a></li>
+                        <li><a href="/blog/">Health Articles</a></li>
+                        <li><a href="https://988lifeline.org/" target="_blank" rel="noopener">Crisis Resources</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2026 thrive.md — A trusted source for health information</p>
                 <div class="footer-legal">
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms">Terms of Service</a>
-                    <a href="/disclaimer">Medical Disclaimer</a>
                 </div>
             </div>
         </div>

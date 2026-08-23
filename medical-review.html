@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='16' y='24' font-family='-apple-system,system-ui,sans-serif' font-weight='800' font-size='16' fill='%230d9488' text-anchor='middle' letter-spacing='-0.5'%3E.md%3C/text%3E%3C/svg%3E">
+    <title>Medical Review Process — thrive.md</title>
+    <link rel="canonical" href="https://thrive.md/medical-review.html">
+    <meta name="description" content="How our medical review board ensures every article is clinically accurate, up to date, and trustworthy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #4a7c6f;
+            --sage-light: #6b9b8a;
+            --cream: #faf9f7;
+            --text-primary: #2d3436;
+            --text-secondary: #636e72;
+            --coral: #e17055;
+            --gradient-sage: linear-gradient(135deg, #4a7c6f 0%, #6b9b8a 100%);
+            --shadow-lift: 0 12px 48px rgba(74,124,111,0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        h1, h2, h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Nav */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(250, 249, 247, 0.8);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+        .nav-inner {
+            max-width: 1400px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo {
+            font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 700;
+            color: var(--sage); text-decoration: none;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .logo-dot { width: 10px; height: 10px; background: var(--coral); border-radius: 50%; display: inline-block; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--sage); }
+        .nav-cta {
+            background: var(--gradient-sage); color: white; padding: 0.75rem 1.5rem;
+            border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 0.9rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+
+        /* Content */
+        .page-hero {
+            text-align: center; padding: 8rem 2rem 3rem;
+            max-width: 720px; margin: 0 auto;
+        }
+        .page-hero h1 { font-size: 2.75rem; margin-bottom: 1rem; }
+        .page-hero p { font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; }
+        .page-hero .updated {
+            font-size: 0.85rem; color: var(--text-secondary);
+            margin-top: 0.75rem; font-style: italic;
+        }
+
+        .content {
+            max-width: 720px; margin: 0 auto; padding: 0 2rem 4rem;
+        }
+        .content h2 {
+            font-size: 1.5rem; margin: 2.5rem 0 1rem;
+            padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.06);
+        }
+        .content h2:first-child { border-top: none; padding-top: 0; }
+        .content h3 { font-size: 1.15rem; margin: 1.5rem 0 0.75rem; }
+        .content p { margin-bottom: 1rem; color: var(--text-primary); }
+        .content ul, .content ol { margin: 0 0 1rem 1.5rem; }
+        .content li { margin-bottom: 0.5rem; }
+
+        /* Process steps */
+        .process-steps {
+            display: flex; flex-direction: column; gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .step {
+            background: white; border-radius: 16px; padding: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.06);
+            display: flex; gap: 1.25rem; align-items: flex-start;
+        }
+        .step-num {
+            width: 40px; height: 40px; min-width: 40px;
+            border-radius: 50%; background: var(--gradient-sage);
+            color: white; font-weight: 700; font-size: 1.1rem;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .step h3 { margin-top: 0; margin-bottom: 0.5rem; }
+        .step p { margin-bottom: 0; color: var(--text-secondary); }
+
+        /* Criteria table */
+        .criteria {
+            width: 100%; border-collapse: collapse; margin: 1.5rem 0;
+            background: white; border-radius: 12px; overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .criteria th {
+            background: var(--sage); color: white;
+            padding: 0.75rem 1rem; text-align: left;
+            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        .criteria td {
+            padding: 0.75rem 1rem; border-bottom: 1px solid rgba(0,0,0,0.04);
+            font-size: 0.95rem;
+        }
+        .criteria tr:last-child td { border-bottom: none; }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem 2rem; background: var(--text-primary); color: white;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 4rem; margin-bottom: 4rem;
+        }
+        .footer-brand h3 {
+            font-family: 'Fraunces', serif; font-size: 1.75rem; margin-bottom: 1rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .footer-brand p { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7; max-width: 300px; }
+        .footer-col h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.5rem; color: rgba(255,255,255,0.5);
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.75rem; }
+        .footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .footer-col a:hover { color: white; }
+        .footer-bottom {
+            padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+        }
+        .footer-bottom p { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+        .footer-legal { display: flex; gap: 2rem; }
+        .footer-legal a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-legal a:hover { color: white; }
+
+        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) {
+            nav { padding: 1rem; }
+            .nav-links { display: none; }
+            .page-hero { padding: 7rem 1.5rem 2rem; }
+            .page-hero h1 { font-size: 2rem; }
+            .step { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="logo">thrive<span class="logo-dot"></span>md</a>
+            <ul class="nav-links">
+                <li><a href="/topics.html">Health Topics</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/editorial-policy.html">Our Standards</a></li>
+                <li><a href="/blog/">Articles</a></li>
+            </ul>
+            <a href="/#ask" class="nav-cta">Ask a Question</a>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>Medical Review Process</h1>
+        <p>Every article in the thrive.md network goes through a structured review process to ensure clinical accuracy and reliability.</p>
+        <p class="updated">Last updated: February 2026</p>
+    </section>
+
+    <div class="content">
+
+        <h2>Our Review Pipeline</h2>
+        <p>No content reaches our readers without passing through each stage of our review process:</p>
+
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div>
+                    <h3>Research & Drafting</h3>
+                    <p>Content is drafted using primary medical sources — peer-reviewed journals, clinical guidelines, and institutional resources. Every factual claim is linked to its source.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div>
+                    <h3>Clinical Review</h3>
+                    <p>A licensed healthcare professional reviews the draft for medical accuracy, appropriate nuance, and alignment with current clinical practice. They verify diagnoses, treatment recommendations, and drug information.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div>
+                    <h3>Readability & Accessibility</h3>
+                    <p>Content is edited to an 8th-grade reading level. Medical terms are explained in context. Structure is optimized for scanning — headers, bullet points, and clear takeaways.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <div>
+                    <h3>Citation Verification</h3>
+                    <p>Every source is checked for validity, recency, and relevance. Outdated studies are replaced. Links are verified as accessible. The minimum standard is sources published within the last 5 years for rapidly evolving topics.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">5</div>
+                <div>
+                    <h3>Publication & Monitoring</h3>
+                    <p>After publication, content enters our monitoring cycle. Articles are flagged for re-review when new guidelines are issued, new drugs are approved, or reader feedback highlights concerns.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Review Criteria</h2>
+        <p>Our clinical reviewers evaluate content against these standards:</p>
+
+        <table class="criteria">
+            <thead>
+                <tr>
+                    <th>Criterion</th>
+                    <th>Standard</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Medical accuracy</strong></td>
+                    <td>All claims align with current clinical evidence and guidelines</td>
+                </tr>
+                <tr>
+                    <td><strong>Appropriate scope</strong></td>
+                    <td>Content does not overstate evidence or make unsupported claims</td>
+                </tr>
+                <tr>
+                    <td><strong>Balanced perspective</strong></td>
+                    <td>Benefits and risks are presented fairly; treatment options are not cherry-picked</td>
+                </tr>
+                <tr>
+                    <td><strong>Source quality</strong></td>
+                    <td>Primary sources are peer-reviewed or from recognized medical institutions</td>
+                </tr>
+                <tr>
+                    <td><strong>Drug information</strong></td>
+                    <td>Dosing, interactions, and side effects match FDA-approved labeling</td>
+                </tr>
+                <tr>
+                    <td><strong>Disclaimers</strong></td>
+                    <td>Content clearly states it is informational, not a substitute for professional advice</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Update Frequency</h2>
+        <ul>
+            <li><strong>Rolling review:</strong> All content is reviewed at minimum every 12 months</li>
+            <li><strong>Rapid updates:</strong> New drug approvals, guideline changes, or safety alerts trigger updates within 30 days</li>
+            <li><strong>Reader-reported issues:</strong> Investigated and resolved within 48 hours</li>
+            <li><strong>Date stamps:</strong> Every article displays its last review date</li>
+        </ul>
+
+        <h2>Limitations</h2>
+        <p>We are transparent about what our content can and cannot do:</p>
+        <ul>
+            <li>Our articles are educational — they are not a substitute for a doctor-patient relationship</li>
+            <li>We cover general information; individual medical situations require personalized clinical evaluation</li>
+            <li>Our AI-powered Q&A features provide information based on published evidence, not personalized diagnosis</li>
+            <li>We cannot guarantee that all information is current at the moment you read it — medicine evolves continuously</li>
+        </ul>
+
+        <h2>Report a Concern</h2>
+        <p>If you believe any content on our network contains an error, is misleading, or needs updating, please <a href="/contact.html" style="color: var(--sage); font-weight: 500;">contact our editorial team</a>. We take every report seriously.</p>
+
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>thrive<span class="logo-dot"></span>md</h3>
+                    <p>Empowering you with trustworthy health information and compassionate guidance for your wellness journey.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Topics</h4>
+                    <ul>
+                        <li><a href="/topics.html#mental-health">Mental Health</a></li>
+                        <li><a href="/topics.html#weight">Weight & Metabolic</a></li>
+                        <li><a href="/topics.html#chronic">Chronic Conditions</a></li>
+                        <li><a href="/topics.html#screenings">Screenings & Procedures</a></li>
+                        <li><a href="/topics.html#patient-tools">Patient Tools</a></li>
+                        <li><a href="/topics.html#industry">Healthcare Industry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/editorial-policy.html">Editorial Policy</a></li>
+                        <li><a href="/medical-review.html">Medical Review</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog/">Health Articles</a></li>
+                        <li><a href="https://988lifeline.org/" target="_blank" rel="noopener">Crisis Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 thrive.md &mdash; A trusted source for health information</p>
+                <div class="footer-legal">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

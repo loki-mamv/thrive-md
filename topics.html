@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='16' y='24' font-family='-apple-system,system-ui,sans-serif' font-weight='800' font-size='16' fill='%230d9488' text-anchor='middle' letter-spacing='-0.5'%3E.md%3C/text%3E%3C/svg%3E">
+    <title>All Health Topics — thrive.md</title>
+    <link rel="canonical" href="https://thrive.md/topics.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #4a7c6f;
+            --sage-light: #6b9b8a;
+            --sage-dark: #3d6b5f;
+            --cream: #faf9f7;
+            --warm-white: #ffffff;
+            --text-primary: #2d3436;
+            --text-secondary: #636e72;
+            --text-muted: #95a5a6;
+            --coral: #e17055;
+            --coral-light: #fab1a0;
+            --gradient-sage: linear-gradient(135deg, #4a7c6f 0%, #6b9b8a 100%);
+            --shadow-soft: 0 4px 20px rgba(0,0,0,0.06);
+            --shadow-lift: 0 12px 48px rgba(74,124,111,0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Navigation — matches homepage */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(250, 249, 247, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--sage);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .logo-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--coral);
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover { color: var(--sage); }
+        .nav-cta {
+            background: var(--gradient-sage);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lift);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 8rem 2rem 2rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 2.75rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .domain-count {
+            display: inline-block;
+            background: rgba(74, 124, 111, 0.1);
+            color: var(--sage);
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.02em;
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 1rem; }
+            .nav-links { display: none; }
+            .hero { padding: 7rem 1.5rem 2rem; }
+            .hero h1 { font-size: 2rem; }
+        }
+
+        /* Category sections */
+        .categories {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+        .category {
+            margin-bottom: 3rem;
+        }
+        .category-header [id] { scroll-margin-top: 5rem; }
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e7e5e4;
+        }
+        .category-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .category-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 1.5;
+            fill: none;
+        }
+        .category-header h2 {
+            font-size: 1.5rem;
+        }
+        .category-header span.count {
+            font-size: 0.8rem;
+            color: #a8a29e;
+            font-weight: 500;
+            margin-left: auto;
+        }
+
+        /* Domain grid — stretch short rows */
+        .domain-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        .domain-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+        @media (max-width: 900px) {
+            .domain-grid, .domain-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 500px) {
+            .domain-grid, .domain-grid.cols-3 { grid-template-columns: 1fr; }
+        }
+
+        .domain-card {
+            background: white;
+            border: 1px solid #e7e5e4;
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+        .domain-card:hover {
+            border-color: var(--sage);
+            box-shadow: 0 4px 16px rgba(74, 124, 111, 0.12);
+            transform: translateY(-2px);
+        }
+        .domain-card .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.25rem;
+        }
+        .domain-card .card-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: white;
+            stroke-width: 1.5;
+            fill: none;
+        }
+        .domain-card .domain-name {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--sage);
+        }
+        .domain-card .domain-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1c1917;
+        }
+        .domain-card .domain-desc {
+            font-size: 0.85rem;
+            color: #78716c;
+            line-height: 1.5;
+        }
+        .domain-card .domain-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
+            margin-top: 0.35rem;
+            width: fit-content;
+        }
+        .tag-live { background: #dcfce7; color: #166534; }
+        .tag-hub { background: #0d94881a; color: #0d9488; }
+        .tag-coming { background: #fef3c7; color: #92400e; }
+
+        /* Icon colors per category */
+        .icon-mental { background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%); }
+        .icon-weight { background: linear-gradient(135deg, #55efc4 0%, #00b894 100%); }
+        .icon-chronic { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
+        .icon-screening { background: linear-gradient(135deg, #fab1a0 0%, #e17055 100%); }
+        .icon-tools { background: linear-gradient(135deg, #81ecec 0%, #00cec9 100%); }
+        .icon-industry { background: linear-gradient(135deg, #636e72 0%, #2d3436 100%); }
+
+        /* Footer — matches homepage */
+        footer {
+            padding: 4rem 2rem 2rem;
+            background: var(--text-primary);
+            color: white;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        .footer-brand h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .footer-brand .logo-dot {
+            width: 10px; height: 10px; background: var(--coral);
+            border-radius: 50%; display: inline-block;
+        }
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem; line-height: 1.7; max-width: 300px;
+        }
+        .footer-col h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.9rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.05em;
+            margin-bottom: 1.5rem; color: rgba(255,255,255,0.5);
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.75rem; }
+        .footer-col a {
+            color: rgba(255,255,255,0.8); text-decoration: none;
+            font-size: 0.95rem; transition: color 0.2s ease;
+        }
+        .footer-col a:hover { color: white; }
+        .footer-bottom {
+            padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex; justify-content: space-between;
+            align-items: center; flex-wrap: wrap; gap: 1rem;
+        }
+        .footer-bottom p { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+        .footer-legal { display: flex; gap: 2rem; }
+        .footer-legal a {
+            color: rgba(255,255,255,0.5); text-decoration: none;
+            font-size: 0.9rem; transition: color 0.2s ease;
+        }
+        .footer-legal a:hover { color: white; }
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="logo">
+                thrive<span class="logo-dot"></span>md
+            </a>
+            <ul class="nav-links">
+                <li><a href="/topics.html">Health Topics</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/editorial-policy.html">Our Standards</a></li>
+                <li><a href="/blog/">Articles</a></li>
+            </ul>
+            <a href="/#ask" class="nav-cta">Ask a Question</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <span class="domain-count">25 domains · 1 network</span>
+        <h1>All Health Topics</h1>
+        <p>Every domain in the thrive.md network — evidence-based health information organized by category, each on its own memorable .md domain.</p>
+    </section>
+
+    <section class="categories">
+
+        <!-- Mental Health (6) -->
+        <div class="category">
+            <div class="category-header">
+                <div id="mental-health" class="category-icon icon-mental">
+                    <svg viewBox="0 0 24 24" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                        <line x1="9" y1="9" x2="9.01" y2="9"/>
+                        <line x1="15" y1="9" x2="15.01" y2="9"/>
+                    </svg>
+                </div>
+                <h2>Mental Health</h2>
+                <span class="count">6 domains</span>
+            </div>
+            <div class="domain-grid cols-3">
+                <a href="https://mental.md" class="domain-card">
+                    <div class="card-icon icon-mental">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                    </div>
+                    <span class="domain-name">mental.md</span>
+                    <span class="domain-title">Mental Health Hub</span>
+                    <span class="domain-desc">Depression, therapy options, and building emotional resilience.</span>
+                    <span class="domain-tag tag-hub">Sub-Hub</span>
+                </a>
+                <a href="https://anxiety.md" class="domain-card">
+                    <div class="card-icon icon-mental">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/><line x1="12" y1="2" x2="12" y2="4"/></svg>
+                    </div>
+                    <span class="domain-name">anxiety.md</span>
+                    <span class="domain-title">Anxiety & Stress</span>
+                    <span class="domain-desc">Managing worry, panic attacks, and finding calm in everyday life.</span>
+                    <span class="domain-tag tag-live">Live</span>
+                </a>
+                <a href="https://depression.md" class="domain-card">
+                    <div class="card-icon icon-mental">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                    </div>
+                    <span class="domain-name">depression.md</span>
+                    <span class="domain-title">Depression</span>
+                    <span class="domain-desc">Recognizing symptoms, treatment options, and recovery support.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://bipolar.md" class="domain-card">
+                    <div class="card-icon icon-mental">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <span class="domain-name">bipolar.md</span>
+                    <span class="domain-title">Bipolar Disorder</span>
+                    <span class="domain-desc">Understanding mood episodes, medication, and long-term management.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://ptsd.md" class="domain-card">
+                    <div class="card-icon icon-mental">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <span class="domain-name">ptsd.md</span>
+                    <span class="domain-title">PTSD & Trauma</span>
+                    <span class="domain-desc">Trauma recovery, EMDR, and evidence-based healing approaches.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://ocd.md" class="domain-card">
+                    <div class="card-icon icon-mental">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                    </div>
+                    <span class="domain-name">ocd.md</span>
+                    <span class="domain-title">OCD</span>
+                    <span class="domain-desc">Obsessive-compulsive disorder — symptoms, ERP therapy, and coping strategies.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Weight & Metabolic (4) -->
+        <div class="category">
+            <div class="category-header">
+                <div id="weight" class="category-icon icon-weight">
+                    <svg viewBox="0 0 24 24" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/>
+                    </svg>
+                </div>
+                <h2>Weight & Metabolic Health</h2>
+                <span class="count">4 domains</span>
+            </div>
+            <div class="domain-grid">
+                <a href="https://glp1.md" class="domain-card">
+                    <div class="card-icon icon-weight">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                    </div>
+                    <span class="domain-name">glp1.md</span>
+                    <span class="domain-title">GLP-1 Medications</span>
+                    <span class="domain-desc">Ozempic, Wegovy, Mounjaro — the science behind the new weight loss medications.</span>
+                    <span class="domain-tag tag-hub">Sub-Hub</span>
+                </a>
+                <a href="https://ozempic.md" class="domain-card">
+                    <div class="card-icon icon-weight">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    </div>
+                    <span class="domain-name">ozempic.md</span>
+                    <span class="domain-title">Ozempic</span>
+                    <span class="domain-desc">Dosing, side effects, insurance coverage, and what to expect.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://mounjaro.md" class="domain-card">
+                    <div class="card-icon icon-weight">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <span class="domain-name">mounjaro.md</span>
+                    <span class="domain-title">Mounjaro</span>
+                    <span class="domain-desc">Tirzepatide guide — efficacy, comparisons, and patient experiences.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://calories.md" class="domain-card">
+                    <div class="card-icon icon-weight">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                    </div>
+                    <span class="domain-name">calories.md</span>
+                    <span class="domain-title">Calories & Nutrition</span>
+                    <span class="domain-desc">Evidence-based dietary guidance without the fads or misinformation.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Chronic Conditions (4) -->
+        <div class="category">
+            <div class="category-header">
+                <div id="chronic" class="category-icon icon-chronic">
+                    <svg viewBox="0 0 24 24" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                </div>
+                <h2>Chronic Conditions</h2>
+                <span class="count">4 domains</span>
+            </div>
+            <div class="domain-grid">
+                <a href="https://hypertension.md" class="domain-card">
+                    <div class="card-icon icon-chronic">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <span class="domain-name">hypertension.md</span>
+                    <span class="domain-title">Blood Pressure</span>
+                    <span class="domain-desc">Managing high blood pressure through lifestyle, diet, and medication.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://thyroid.md" class="domain-card">
+                    <div class="card-icon icon-chronic">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </div>
+                    <span class="domain-name">thyroid.md</span>
+                    <span class="domain-title">Thyroid Health</span>
+                    <span class="domain-desc">Hypothyroidism, Hashimoto's, and thyroid condition management.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://asthma.md" class="domain-card">
+                    <div class="card-icon icon-chronic">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+                    </div>
+                    <span class="domain-name">asthma.md</span>
+                    <span class="domain-title">Asthma</span>
+                    <span class="domain-desc">Triggers, treatment plans, and living well with asthma.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://insomnia.md" class="domain-card">
+                    <div class="card-icon icon-chronic">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    </div>
+                    <span class="domain-name">insomnia.md</span>
+                    <span class="domain-title">Sleep & Insomnia</span>
+                    <span class="domain-desc">CBT-I, sleep hygiene, and solutions for chronic sleeplessness.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Screenings & Procedures (3) — stretch row -->
+        <div class="category">
+            <div class="category-header">
+                <div id="screenings" class="category-icon icon-screening">
+                    <svg viewBox="0 0 24 24" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                </div>
+                <h2>Screenings & Procedures</h2>
+                <span class="count">3 domains</span>
+            </div>
+            <div class="domain-grid cols-3">
+                <a href="https://colonoscopy.md" class="domain-card">
+                    <div class="card-icon icon-screening">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <span class="domain-name">colonoscopy.md</span>
+                    <span class="domain-title">Colonoscopy</span>
+                    <span class="domain-desc">Prep guides, screening timelines, and what to expect.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://mammogram.md" class="domain-card">
+                    <div class="card-icon icon-screening">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <span class="domain-name">mammogram.md</span>
+                    <span class="domain-title">Mammogram</span>
+                    <span class="domain-desc">Screening guidelines, what to expect, and understanding results.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://mri.md" class="domain-card">
+                    <div class="card-icon icon-screening">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <span class="domain-name">mri.md</span>
+                    <span class="domain-title">MRI Scans</span>
+                    <span class="domain-desc">What to expect, how to prepare, and reading your results.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Patient Tools (3) — stretch row -->
+        <div class="category">
+            <div class="category-header">
+                <div id="patient-tools" class="category-icon icon-tools">
+                    <svg viewBox="0 0 24 24" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+                    </svg>
+                </div>
+                <h2>Patient Tools</h2>
+                <span class="count">3 domains</span>
+            </div>
+            <div class="domain-grid cols-3">
+                <a href="https://symptom.md" class="domain-card">
+                    <div class="card-icon icon-tools">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <span class="domain-name">symptom.md</span>
+                    <span class="domain-title">Symptom Checker</span>
+                    <span class="domain-desc">Understand your symptoms with evidence-based guidance.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://patient.md" class="domain-card">
+                    <div class="card-icon icon-tools">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <span class="domain-name">patient.md</span>
+                    <span class="domain-title">Patient Rights</span>
+                    <span class="domain-desc">Informed consent, records access, and healthcare advocacy.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://supplements.md" class="domain-card">
+                    <div class="card-icon icon-tools">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    </div>
+                    <span class="domain-name">supplements.md</span>
+                    <span class="domain-title">Supplements</span>
+                    <span class="domain-desc">Evidence-based reviews — what works, what doesn't, and what's safe.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Healthcare Industry (4) -->
+        <div class="category">
+            <div class="category-header">
+                <div id="industry" class="category-icon icon-industry">
+                    <svg viewBox="0 0 24 24" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                </div>
+                <h2>Healthcare Industry</h2>
+                <span class="count">4 domains</span>
+            </div>
+            <div class="domain-grid">
+                <a href="https://hipaa.md" class="domain-card">
+                    <div class="card-icon icon-industry">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <span class="domain-name">hipaa.md</span>
+                    <span class="domain-title">HIPAA & Privacy</span>
+                    <span class="domain-desc">Health data privacy rules explained in plain language.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://claims.md" class="domain-card">
+                    <div class="card-icon icon-industry">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <span class="domain-name">claims.md</span>
+                    <span class="domain-title">Insurance Claims</span>
+                    <span class="domain-desc">Medical billing, appeals, and navigating denied claims.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://emr.md" class="domain-card">
+                    <div class="card-icon icon-industry">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <span class="domain-name">emr.md</span>
+                    <span class="domain-title">EMR Systems</span>
+                    <span class="domain-desc">Electronic medical records — comparisons, workflows, and best practices.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+                <a href="https://fhir.md" class="domain-card">
+                    <div class="card-icon icon-industry">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <span class="domain-name">fhir.md</span>
+                    <span class="domain-title">FHIR & Interoperability</span>
+                    <span class="domain-desc">Healthcare data standards, APIs, and the future of health data exchange.</span>
+                    <span class="domain-tag tag-coming">Coming Soon</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>thrive<span class="logo-dot"></span>md</h3>
+                    <p>Empowering you with trustworthy health information and compassionate guidance for your wellness journey.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Topics</h4>
+                    <ul>
+                        <li><a href="/topics.html#mental-health">Mental Health</a></li>
+                        <li><a href="/topics.html#weight">Weight & Metabolic</a></li>
+                        <li><a href="/topics.html#chronic">Chronic Conditions</a></li>
+                        <li><a href="/topics.html#screenings">Screenings & Procedures</a></li>
+                        <li><a href="/topics.html#patient-tools">Patient Tools</a></li>
+                        <li><a href="/topics.html#industry">Healthcare Industry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/editorial-policy.html">Editorial Policy</a></li>
+                        <li><a href="/medical-review.html">Medical Review</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog/">Health Articles</a></li>
+                        <li><a href="https://988lifeline.org/" target="_blank" rel="noopener">Crisis Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 thrive.md &mdash; A trusted source for health information</p>
+                <div class="footer-legal">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
