@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='16' y='24' font-family='-apple-system,system-ui,sans-serif' font-weight='800' font-size='16' fill='%230d9488' text-anchor='middle' letter-spacing='-0.5'%3E.md%3C/text%3E%3C/svg%3E">
-    <title>Medical Review Process — thrive.md</title>
-    <link rel="canonical" href="https://thrive.md/medical-review.html">
-    <meta name="description" content="How our medical review board ensures every article is clinically accurate, up to date, and trustworthy.">
+    <title>Terms of Use — thrive.md</title>
+    <link rel="canonical" href="https://thrive.md/terms.html">
+    <meta name="description" content="The terms that apply to using thrive.md and the .md health network, including acceptable use, the AI Q&amp;A feature, and limitation of liability.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -85,44 +85,17 @@
         .content h2:first-child { border-top: none; padding-top: 0; }
         .content h3 { font-size: 1.15rem; margin: 1.5rem 0 0.75rem; }
         .content p { margin-bottom: 1rem; color: var(--text-primary); }
-        .content ul, .content ol { margin: 0 0 1rem 1.5rem; }
+        .content ul, .content ol {
+            margin: 0 0 1rem 1.5rem; color: var(--text-primary);
+        }
         .content li { margin-bottom: 0.5rem; }
+        .content strong { font-weight: 600; }
 
-        /* Process steps */
-        .process-steps {
-            display: flex; flex-direction: column; gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        .step {
+        .principle-card {
             background: white; border-radius: 16px; padding: 1.5rem;
-            border: 1px solid rgba(0,0,0,0.06);
-            display: flex; gap: 1.25rem; align-items: flex-start;
+            margin-bottom: 1rem; border: 1px solid rgba(0,0,0,0.06);
         }
-        .step-num {
-            width: 40px; height: 40px; min-width: 40px;
-            border-radius: 50%; background: var(--gradient-sage);
-            color: white; font-weight: 700; font-size: 1.1rem;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .step h3 { margin-top: 0; margin-bottom: 0.5rem; }
-        .step p { margin-bottom: 0; color: var(--text-secondary); }
-
-        /* Criteria table */
-        .criteria {
-            width: 100%; border-collapse: collapse; margin: 1.5rem 0;
-            background: white; border-radius: 12px; overflow: hidden;
-            border: 1px solid rgba(0,0,0,0.06);
-        }
-        .criteria th {
-            background: var(--sage); color: white;
-            padding: 0.75rem 1rem; text-align: left;
-            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
-        }
-        .criteria td {
-            padding: 0.75rem 1rem; border-bottom: 1px solid rgba(0,0,0,0.04);
-            font-size: 0.95rem;
-        }
-        .criteria tr:last-child td { border-bottom: none; }
+        .principle-card h3 { margin-top: 0; }
 
         /* Footer */
         footer {
@@ -161,11 +134,45 @@
             .nav-links { display: none; }
             .page-hero { padding: 7rem 1.5rem 2rem; }
             .page-hero h1 { font-size: 2rem; }
-            .step { flex-direction: column; }
             .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
             .footer-bottom { flex-direction: column; text-align: center; }
         }
     </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://thrive.md/terms.html",
+  "url": "https://thrive.md/terms.html",
+  "name": "Terms of Use — thrive.md",
+  "description": "The terms that apply to using thrive.md and the .md health network, including acceptable use, the AI Q&A feature, and limitation of liability.",
+  "dateModified": "2026-08-23",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://thrive.md/#organization",
+    "name": "thrive.md",
+    "url": "https://thrive.md"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "thrive.md",
+        "item": "https://thrive.md/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terms of Use",
+        "item": "https://thrive.md/terms.html"
+      }
+    ]
+  }
+}
+    </script>
 </head>
 <body>
 
@@ -183,112 +190,38 @@
     </nav>
 
     <section class="page-hero">
-        <h1>Medical Review Process</h1>
-        <p>Every article in the thrive.md network goes through a structured review process to ensure clinical accuracy and reliability.</p>
-        <p class="updated">Last updated: February 2026</p>
+        <h1>Terms of Use</h1>
+        <p>The terms that apply when you use thrive.md or any site in the .md health network.</p>
+        <p class="updated">Last updated: August 2026</p>
     </section>
 
     <div class="content">
-
-        <h2>Our Review Pipeline</h2>
-        <p>No content reaches our readers without passing through each stage of our review process:</p>
-
-        <div class="process-steps">
-            <div class="step">
-                <div class="step-num">1</div>
-                <div>
-                    <h3>Research & Drafting</h3>
-                    <p>Content is drafted using primary medical sources — peer-reviewed journals, clinical guidelines, and institutional resources. Every factual claim is linked to its source.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-num">2</div>
-                <div>
-                    <h3>Clinical Review</h3>
-                    <p>A licensed healthcare professional reviews the draft for medical accuracy, appropriate nuance, and alignment with current clinical practice. They verify diagnoses, treatment recommendations, and drug information.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-num">3</div>
-                <div>
-                    <h3>Readability & Accessibility</h3>
-                    <p>Content is edited to an 8th-grade reading level. Medical terms are explained in context. Structure is optimized for scanning — headers, bullet points, and clear takeaways.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-num">4</div>
-                <div>
-                    <h3>Citation Verification</h3>
-                    <p>Every source is checked for validity, recency, and relevance. Outdated studies are replaced. Links are verified as accessible. The minimum standard is sources published within the last 5 years for rapidly evolving topics.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-num">5</div>
-                <div>
-                    <h3>Publication & Monitoring</h3>
-                    <p>After publication, content enters our monitoring cycle. Articles are flagged for re-review when new guidelines are issued, new drugs are approved, or reader feedback highlights concerns.</p>
-                </div>
-            </div>
-        </div>
-
-        <h2>Review Criteria</h2>
-        <p>Our clinical reviewers evaluate content against these standards:</p>
-
-        <table class="criteria">
-            <thead>
-                <tr>
-                    <th>Criterion</th>
-                    <th>Standard</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Medical accuracy</strong></td>
-                    <td>All claims align with current clinical evidence and guidelines</td>
-                </tr>
-                <tr>
-                    <td><strong>Appropriate scope</strong></td>
-                    <td>Content does not overstate evidence or make unsupported claims</td>
-                </tr>
-                <tr>
-                    <td><strong>Balanced perspective</strong></td>
-                    <td>Benefits and risks are presented fairly; treatment options are not cherry-picked</td>
-                </tr>
-                <tr>
-                    <td><strong>Source quality</strong></td>
-                    <td>Primary sources are peer-reviewed or from recognized medical institutions</td>
-                </tr>
-                <tr>
-                    <td><strong>Drug information</strong></td>
-                    <td>Dosing, interactions, and side effects match FDA-approved labeling</td>
-                </tr>
-                <tr>
-                    <td><strong>Disclaimers</strong></td>
-                    <td>Content clearly states it is informational, not a substitute for professional advice</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>Update Frequency</h2>
+        <h2>Acceptance</h2>
+        <p>By using this site you agree to these terms. If you do not agree with them, please do not use the site. These terms apply to thrive.md and to every site in the .md health network that links here.</p>
+        <h2>The site is information, not medical care</h2>
+        <p>Everything published here is general health information for education. It is not medical advice, it does not create a clinician-patient relationship, and it cannot account for your history, medications, or circumstances. Our full medical disclaimer sets this out in detail and forms part of these terms.</p>
+        <h2>The AI Q&amp;A feature</h2>
+        <p>The Q&A box generates answers using an AI language model. AI systems can produce answers that are incomplete, out of date, or simply wrong, and they can state wrong things confidently. Treat every answer as a starting point for a conversation with a clinician, never as a substitute for one. Do not rely on it in an emergency.</p>
+        <p>Do not submit personal health information, information about another identifiable person, or anything confidential.</p>
+        <h2>Acceptable use</h2>
         <ul>
-            <li><strong>Rolling review:</strong> All content is reviewed at minimum every 12 months</li>
-            <li><strong>Rapid updates:</strong> New drug approvals, guideline changes, or safety alerts trigger updates within 30 days</li>
-            <li><strong>Reader-reported issues:</strong> Investigated and resolved within 48 hours</li>
-            <li><strong>Date stamps:</strong> Every article displays its last review date</li>
+            <li>Do not use the site or the Q&amp;A feature for any unlawful purpose</li>
+            <li>Do not attempt to disrupt, overload, or gain unauthorized access to the site or its supporting services</li>
+            <li>Do not scrape or bulk-copy content for republication without permission</li>
+            <li>Do not use content here to give medical advice to others as though it were clinician-reviewed advice for their situation</li>
         </ul>
-
-        <h2>Limitations</h2>
-        <p>We are transparent about what our content can and cannot do:</p>
-        <ul>
-            <li>Our articles are educational — they are not a substitute for a doctor-patient relationship</li>
-            <li>We cover general information; individual medical situations require personalized clinical evaluation</li>
-            <li>Our AI-powered Q&A features provide information based on published evidence, not personalized diagnosis</li>
-            <li>We cannot guarantee that all information is current at the moment you read it — medicine evolves continuously</li>
-        </ul>
-
-        <h2>Report a Concern</h2>
-        <p>If you believe any content on our network contains an error, is misleading, or needs updating, please <a href="/contact.html" style="color: var(--sage); font-weight: 500;">contact our editorial team</a>. We take every report seriously.</p>
-
+        <h2>Content and copyright</h2>
+        <p>Articles, layout, and design on this network are owned by their authors and publisher and are protected by copyright. You may quote short excerpts with clear attribution and a link. You may not republish whole articles or substantial portions without written permission. Third-party names, logos, and trademarks belong to their owners and appear here for identification only.</p>
+        <h2>External links</h2>
+        <p>We link to government agencies, medical societies, journals, and patient organizations. We do not control those sites and are not responsible for their content, accuracy, or privacy practices.</p>
+        <h2>No warranty</h2>
+        <p>The site is provided “as is” and “as available.” We make no warranty that content is complete, current, or error-free, or that the site will be uninterrupted. Medical knowledge changes, and pages may not reflect the most recent guidance at the moment you read them.</p>
+        <h2>Limitation of liability</h2>
+        <p>To the fullest extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of this site or reliance on anything published here, including anything produced by the Q&A feature. Some jurisdictions do not allow certain limitations, in which case they apply to you only as far as the law allows.</p>
+        <h2>Changes to these terms</h2>
+        <p>We may update these terms. The date below shows the current version, and continued use of the site after a change means you accept the updated terms.</p>
+        <h2>Contact</h2>
+        <p>Questions about these terms: hello@thrive.md</p>
     </div>
 
     <footer>

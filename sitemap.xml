@@ -3,10 +3,13 @@
   <url><loc>https://thrive.md/</loc><lastmod>2026-08-14</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://thrive.md/blog/</loc><lastmod>2026-08-23</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://thrive.md/about.html</loc><lastmod>2026-02-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://thrive.md/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://thrive.md/editorial-policy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://thrive.md/medical-review.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://thrive.md/topics.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thrive.md/contact.html</loc><lastmod>2026-08-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thrive.md/disclaimer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thrive.md/editorial-policy.html</loc><lastmod>2026-08-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thrive.md/medical-review.html</loc><lastmod>2026-08-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thrive.md/privacy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thrive.md/terms.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thrive.md/topics.html</loc><lastmod>2026-08-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://thrive.md/blog/annual-checkup-guide/</loc><lastmod>2026-02-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://thrive.md/blog/building-healthy-habits/</loc><lastmod>2026-03-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://thrive.md/blog/evidence-based-wellness-habits/</loc><lastmod>2026-02-14</lastmod><priority>0.7</priority></url>
